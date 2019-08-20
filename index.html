@@ -1,57 +1,174 @@
   <!DOCTYPE html>
   <html>
-    <head>
+
+  <head>
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css"  media="screen,projection"/>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css" media="screen,projection" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js"></script>
-
+      <link href="https://fonts.googleapis.com/css?family=Megrim&display=swap" rel="stylesheet">
+      <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
       <style>
-      	h1, h2, h3, h4, h5, h6, p {
-      		color: white;
-      	}
+          h1,
+          h2,
+          h3,
+          h4,
+          h5,
+          h6,
+          p {
+              color: white;
+          }
 
-      	#nav-envelope {
-      		transition:opacity 0.25s ease;
-      	}
-      	.visible {
-      		opacity:0.8;
-      	}
-      	.invisible {
-      		opacity: 0;
-      	}
+          #nav-envelope {
+              transition: opacity 0.25s ease;
+          }
+
+          .visible {
+              opacity: 0.8;
+          }
+
+          .invisible {
+              opacity: 0;
+          }
+
+          a {
+              color: black !important;
+          }
+
+          .frame {
+              height: 100vh;
+              border: 1px solid transparent;
+              text-align: center;
+          }
+
+          .typed-cursor {
+              opacity: 1;
+              animation: blink .7s infinite;
+              color: white;
+          }
+
+          @keyframes blink {
+              0% {
+                  opacity: 1;
+              }
+
+              50% {
+                  opacity: 0;
+              }
+
+              100% {
+                  opacity: 1;
+              }
+          }
+
+          #navbar {
+              height: 100px;
+              position: fixed;
+              top: 0;
+              left: 0;
+              right: 0;
+              width: 100%;
+              margin: 0;
+              padding: 0;
+              background: white;
+              transition: opacity 1s ease;
+          }
+
+          .rounded {
+              border-radius: 50%;
+              max-width: 350px;
+              width:100%;
+          }
+
+          #intro {
+              background: url('assets/img/bg.png')
+          }
+
+          .btn-large {
+              transition: all 0.25 ease;
+              transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550);
+          }
+
+          .btn-large:hover {
+              border-radius: 30px;
+              transform: scale(1.4)
+          }
+          #oliver {
+              background:url('assets/img/bg-light.png');
+              color:black;
+              font-family: 'Megrim', cursive;
+              transition: all 0.25s ease;
+              max-width:400px;
+              width:100%;
+              border-radius:0px 0px 50px 50px ;
+              text-align: center;
+              margin:auto;
+              position:fixed;
+              left:0;right:0;top:0;
+              opacity:0.8;
+              z-index: 99;
+          }
+          @media only screen and (max-height:895px) {
+              #intro {
+                  height:auto;
+              }
+          }
       </style>
 
-    </head>
-    <body class="grey darken-4">
-    <div id="nav-envelope" class="invisible">
-      <div class="navbar-fixed">
-    	<nav class="grey darken-4">
-	    <div class="nav-wrapper">
-	      <ul id="nav-mobile" class="left">
-	        <li><a href="#home">Home</a></li>
-	      </ul>
-	      <ul id="nav-mobile" class="right hide-on-med-and-down">
-	        <li><a href="#projects">Projects</a></li>
-	        <li><a href="#skills">Skills</a></li>
-	        <li><a href="#expereince">Experience</a></li>
-	      </ul>
-	    </div>
-  		</nav>
-  		</div>
-  	</div>
-  		<h1>Hello world</h1><br><h1>Hello world</h1><br><h1>Hello world</h1><br><h1>Hello world</h1><br><h1>Hello world</h1><br><h1>Hello world</h1><br><h1>Hello world</h1><br><h1>Hello world</h1><br><h1>Hello world</h1><br><h1>Hello world</h1>
-    </body>
+  </head>
+
+  <body class="grey darken-4">
+      <!--
+      <div id="nav-envelope" class="invisible">
+          <div class="navbar-fixed">
+              <nav class="white darken-4">
+                  <div class="nav-wrapper">
+                      <ul id="nav-mobile" class="left">
+                          <b>Oliver Miller</b>
+                      </ul>
+                      <ul id="nav-mobile" class="right hide-on-med-and-down">
+                          <li><a href="#projects">Projects</a></li>
+                          <li><a href="#skills">Skills</a></li>
+                          <li><a href="#expereince">Experience</a></li>
+                      </ul>
+                  </div>
+              </nav>
+          </div>
+      </div>
+-->
+      <!--      <div id="navbar" class="invisible"></div>-->
+      <div class="frame" id="intro">
+          <h2 id="oliver">Oliver Miller</h2>
+          <br><br><br><br>
+          <img class="rounded" src="assets/img/pfp_square.jpg">
+          <h2><span class="typed">Hello</span></h2>
+          <br><br>
+          <a href="#projects_frame" class="waves-effect waves-light btn-large blue darken-3"><i class="material-icons left">assignment</i>Projects</a><br><br>
+          <a href="#skills_frame" class="waves-effect waves-light btn-large green lighten-2"><i class="material-icons left">build</i>Skills</a><br><br>
+          <a href="#resume_frame" class="waves-effect waves-light btn-large red"><i class="material-icons left">edit</i>Resume</a><br><br>
+      </div>
+      <div class="frame blue darken-3" id="projects_frame">
+          <h1>My Projects</h1>
+      </div>
+      <div class="frame green lighten-2" id="skills_frame">
+          <h1>Skills</h1>
+      </div>
+      <div class="frame red" id="resume_frame">
+          <h1>Resume</h1>
+      </div>
+
+  </body>
+
   </html>
   <script>
-      	window.onscroll = function() {myFunction()};
-      	var navBar = document.getElementById("nav-envelope");
-      	navBar.className="invisible";
-		function myFunction() {
-		  if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
-			navBar.className = "visible";
-		  } else {
-		    navBar.className = "invisible";
-		  }
-		}
-      </script>
+      var options = {
+          strings: ["", "I develop intuitive apps.", "I develop helpful websites.", "I create. "],
+          typeSpeed: 20,
+          smartBackspace: false,
+          showCursor: true,
+          cursorChar: '|',
+          autoInsertCss: true,
+      }
+
+      var typed = new Typed(".typed", options);
+  </script>
