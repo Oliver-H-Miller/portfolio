@@ -87,6 +87,7 @@
           }
 
           .btn-large {
+              border-radius: 8px;
               transition: all 0.25 ease;
               transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550);
           }
@@ -94,6 +95,36 @@
           .btn-large:hover {
               border-radius: 30px;
               transform: scale(1.4)
+          }
+
+          .card * {
+              color: inherit;
+              text-align: left;
+          }
+
+          .card {
+              margin: auto;
+              margin-top: 50px;
+              max-width: 800px;
+              border-radius: 12px;
+          }
+
+          .card .card-image img {
+              margin: 0px 15px;
+              width: 100%;
+              max-width: 60px !important;
+              position: relative;
+              top: 50%;
+              transform: translateY(-50%);
+          }
+
+          .card .card-image img,
+          .card-image {
+              border-radius: 12px 0px 0px 12px !important;
+          }
+
+          .card-image {
+              background: url('assets/img/bg.png');
           }
 
           #oliver {
@@ -118,9 +149,7 @@
               }
           }
 
-          .item-list {
-              text-align: left;
-          }
+          .item-list {}
 
           hr {
               max-width: 900px;
@@ -128,30 +157,30 @@
               height: 2px;
               background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
           }
+
+          #projects_frame {
+              height: auto;
+              background: linear-gradient(225deg, rgba(68, 138, 255, 1) 0%, rgba(2, 119, 189, 1) 40%, rgba(0, 172, 125, 1) 100%);
+
+          }
+          
+          .card {
+              transition: all 0.3s ease;
+              transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550);
+          }
+          
+          .card:hover {
+              transform: scale(1.03);
+          }
+          
+          .card-title {
+              font-weight: 500 !important;
+          }
       </style>
 
   </head>
 
   <body class="grey darken-4">
-      <!--
-      <div id="nav-envelope" class="invisible">
-          <div class="navbar-fixed">
-              <nav class="white darken-4">
-                  <div class="nav-wrapper">
-                      <ul id="nav-mobile" class="left">
-                          <b>Oliver Miller</b>
-                      </ul>
-                      <ul id="nav-mobile" class="right hide-on-med-and-down">
-                          <li><a href="#projects">Projects</a></li>
-                          <li><a href="#skills">Skills</a></li>
-                          <li><a href="#expereince">Experience</a></li>
-                      </ul>
-                  </div>
-              </nav>
-          </div>
-      </div>
--->
-      <!--      <div id="navbar" class="invisible"></div>-->
       <div class="frame" id="intro">
           <img id="oliver" src="assets/img/name.png">
           <br><br>
@@ -163,17 +192,151 @@
           <a href="#resume_frame" class="waves-effect waves-light btn-large red"><i class="material-icons left">edit</i>Resume</a><br><br>
       </div>
       <div class="frame blue darken-3" id="projects_frame">
-          <h1>My Projects</h1>
+          <h1>Featured Projects</h1>
           <hr>
-          <div class="item-list">
-              <h4>Hello sir</h4>
+          <div class="container">
+              <div class="item-list">
+                  <div class="row">
+                      <br><br>
+                      <h4>App Based Projects</h4>
+                      <div class="col m12 l6">
+                          <div class="card hoverable horizontal">
+                              <div class="card-image">
+                                  <img src="https://lh3.googleusercontent.com/rCo2-A58AFyACGCmr8CRMq17Ui7gJOdfDD2pRXIGtAeZ96766WccDhD5S9lY_3bMxw=s180-rw">
+                              </div>
+                              <div class="card-stacked">
+                                  <div class="card-content">
+                                      <span class="card-title">Material Design Voice Recorder</span>
+                                      <p>Intuitive, professional, and advanced voice recorder focused on delivering a straight-forward user experience. Created using the Kotlin programming language, the app sports advanced abilities such as automatic backup, advanced sharing, and custom bitrate settings that will satisfy any power user.
+                                      </p>
+                                  </div>
+                                  <div class="card-action">
+                                      <a href="#">View on Play Store</a><a href="#">View Source Code</a>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col m12 l6">
+                          <div class="card hoverable horizontal">
+                              <div class="card-image">
+                                  <img src="https://lh3.googleusercontent.com/1I1jBoarnLnkUeRSDOMfb3xkxQF0q43jnmdwpfpWNtW-CtX0ZCrjKHQ3oToYeYJ5mCw=s180-rw">
+                              </div>
+                              <div class="card-stacked">
+                                  <div class="card-content">
+                                      <span class="card-title">CustomBoot v2</span>
+                                      <p>Android Application (Java based) that allows users to customize how their device boots up. OEMs are notorius for including their own branding whenever a device boots, this app changes that. Currently closed source with the intent to open source later down the road.
+                                  </div>
+                                  <div class="card-action">
+                                      <a href="#">View on Play Store</a>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col m12 l6">
+                          <div class="card hoverable horizontal">
+                              <div class="card-image">
+                                  <img src="https://lh3.googleusercontent.com/v8ij2uH7cDSoJ1D1vpR70ls9Fo4BK__BlEJ2_7nm-LcssGXrYV2WN1RxUwHBECqthQ">
+                              </div>
+                              <div class="card-stacked">
+                                  <div class="card-content">
+                                      <span class="card-title">VisionOCR</span>
+                                      <p>Application (Java based) dedicated to interpreting user generated images to text using Computer Vision AI. For example, taking a photo of your receipt would generate all the text from your receipt into a copy &amp; paste&mdash;able list. <i>Due to updated app practices from Google, app is currently in maintenance and will return to the Google Play Store soon.</i></p>
+                                  </div>
+                                  <div class="card-action">
+                                      <a href="#">View Screenshots</a>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col m12 l6">
+                          <div class="card hoverable horizontal">
+                              <div class="card-image">
+                                  <img src="https://lh3.googleusercontent.com/3rYP6xkBx4cS8vqVGKggywmG12kYtVSU_CnJaOAH1nhZByFeGkqnZ6Nvyi2gNpmg270">
+                              </div>
+                              <div class="card-stacked">
+                                  <div class="card-content">
+                                      <span class="card-title">Root Reboot (Recovery)</span>
+                                      <p>Simple application (Java based) that allows root users to reboot their phone. Furthermore, it allows users to reboot into 'Recovery Mode', which is generally used to create or restore backups.</p> <i>Due to updated app practices from Google, app is currently in maintenance and will return to the Google Play Store soon.</i>
+                                  </div>
+                                  <div class="card-action">
+                                      <a href="#">View Screenshots</a>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <br><br>
+                      <h4>Web Based Projects</h4>
+                      <div class="col m12 l6">
+                          <div class="card hoverable horizontal">
+                              <div class="card-image">
+                                  <img src="assets/img/project_icon_personal_counseling_business.png">
+                              </div>
+                              <div class="card-stacked">
+                                  <div class="card-content">
+                                      <span class="card-title">Dr. Conner's Personal Counseling Business</span>
+                                      <p>Website created for Dr. Conner's counseling business. Created from scratch with Material Design principles in mind, the user experience is very direct and easy to use. The website offers information about her business, and contains other functionality such as a contact form, location information, and information about her services.</p>
+                                  </div>
+                                  <div class="card-action">
+                                      <a href="#">View Website</a>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col m12 l6">
+                          <div class="card hoverable horizontal">
+                              <div class="card-image">
+                                  <img src="assets/img/project_icon_new_providence_capital.png">
+                              </div>
+                              <div class="card-stacked">
+                                  <div class="card-content">
+                                      <span class="card-title">New Providence Capital</span>
+                                      <p>Professional WordPress website designed for New Providence Capital, a direct lending company that specializes in financing for the real estate industry. The website strives to be clean, intuitive, and minimalistic.</p>
+                                  </div>
+                                  <div class="card-action">
+                                      <a href="#">View Website</a>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col m12 l6">
+                          <div class="card hoverable horizontal">
+                              <div class="card-image">
+                                  <img src="assets/img/project_icon_portfolio.png">
+                              </div>
+                              <div class="card-stacked">
+                                  <div class="card-content">
+                                      <span class="card-title">My Portfolio</span>
+                                      <p>Portfolio website used to display projects that I've created (or am creating). Built from scratch, the portfolio uses the MaterializeCSS framework, in addition to other JavaScript frameworks such as Typed.js. The website aims to be helpful for potentional employers or clients who would like to see work I've done in the past.</p>
+                                  </div>
+                                  <div class="card-action">
+                                      <a href="#">View Source Code</a>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
           </div>
       </div>
       <div class="frame green lighten-2" id="skills_frame">
           <h1>Skills</h1>
+          <hr>
+          <div class="container">
+              Content
+          </div>
       </div>
       <div class="frame red" id="resume_frame">
           <h1>Resume</h1>
+          <hr>
+          <div class="container">
+              Content
+          </div>
       </div>
 
   </body>
