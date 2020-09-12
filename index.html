@@ -35,6 +35,7 @@
 
           a {
               color: black !important;
+              font-weight: 700 !important;
           }
 
           .frame {
@@ -176,6 +177,12 @@
           .card-title {
               font-weight: 500 !important;
           }
+
+          #github-mark {
+              height: 24px;
+              width: 24px;
+              margin-bottom: -2px;
+          }
       </style>
 
   </head>
@@ -187,9 +194,9 @@
           <img class="rounded" src="assets/img/pfp_square.jpg">
           <h2><span class="typed">Hello</span></h2>
           <br><br>
-          <a href="#projects_frame" class="waves-effect waves-light btn-large blue darken-3"><i class="material-icons left">assignment</i>Projects</a><br><br>
-          <a href="#skills_frame" class="waves-effect waves-light btn-large green lighten-2"><i class="material-icons left">build</i>Skills</a><br><br>
-          <a href="#resume_frame" class="waves-effect waves-light btn-large red"><i class="material-icons left">edit</i>Resume</a><br><br>
+          <a href="#projects_frame" class="waves-effect waves-light btn-large blue"><i class="material-icons left">assignment</i>Projects</a><br><br>
+          <a href="#resume_frame" class="waves-effect waves-light btn-large red"><i class="material-icons left">business_center</i>Resume</a><br><br>
+          <a href="https://github.com/Oliver-H-Miller" class="waves-effect waves-light btn-large grey lighten-3"><i class="left"><img id="github-mark" src="assets/img/github-mark.png"></i>GitHub</a><br><br>
       </div>
       <div class="frame blue darken-3" id="projects_frame">
           <h1>Featured Projects</h1>
@@ -324,19 +331,13 @@
               </div>
           </div>
       </div>
-      <div class="frame green lighten-2" id="skills_frame">
-          <h1>Skills</h1>
-          <hr>
-          <div class="container">
-              Content
-          </div>
-      </div>
       <div class="frame red" id="resume_frame">
           <h1>Resume</h1>
           <hr>
           <div class="container">
-              Content
-          </div>
+            <br><br><br><br><br>
+            <a href="assets/pdf/Oliver-Miller-resume.pdf" class="waves-effect waves-light btn-large grey lighten-4"><i class="material-icons left">file_download</i>Download Resume (PDF)</a><br><br>
+        </div>
       </div>
 
   </body>
@@ -344,7 +345,7 @@
   </html>
   <script>
       var options = {
-          strings: ["", "I develop intuitive apps.", "I develop helpful websites.", "I create. "],
+          strings: ["I'm studying Computer Science at Purdue", "I develop intuitive apps.", "I develop helpful websites.", "I create. "],
           typeSpeed: 20,
           smartBackspace: false,
           showCursor: true,
